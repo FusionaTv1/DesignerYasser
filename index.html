@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روابطي</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            direction: rtl;
+            overflow-x: hidden;
+            animation: gradient-bg 10s infinite alternate;
+        }
+
+        @keyframes gradient-bg {
+            0% {
+                background: linear-gradient(45deg, #6a11cb, #2575fc);
+            }
+
+            100% {
+                background: linear-gradient(45deg, #fc5c7d, #6a11cb);
+            }
+        }
+
+        .background {
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+            animation: move 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+
+            50% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: fade-in 1.5s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 20px;
+            animation: scale-in 1.5s ease-out;
+        }
+
+        @keyframes scale-in {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 230px;
+            height: auto;
+            z-index: 2;
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(106, 17, 203, 0.6));
+            border-radius: 50%;
+            animation: rotate 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .title {
+            font-size: 32px;
+            margin: 15px 0 5px;
+            animation: fade-in 2s ease-out;
+        }
+
+        .description {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 30px;
+            animation: fade-in 2.5s ease-out;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            background-color: rgba(106, 17, 203, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .link img {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            border-radius: 50%;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .link:hover img {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            transform: scale(1.2);
+        }
+
+        .footer {
+            font-size: 18px;
+            color: #ddd;
+            margin-top: 30px;
+            animation: fade-in 2.5s ease-out;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="logo-container">
+            <div class="circle"></div>
+            <img src="2025.png" alt="الشعار" class="logo">
+        </div>
+        <h1 class="title">مرحباً بك!</h1>
+        <p class="description">هنا يمكنك الوصول إلى حساباتي على مواقع التواصل الاجتماعي:</p>
+        <a href="https://t.me/httyaseralwrfy" class="link" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="تليجرام">
+            للحصول على قناتي اضغط هنا
+        </a>
+        <a href="https://youtube.com/@yaseralwrfyy?si=mDSWviQ2c_8Ovogr" class="link" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="يوتيوب">
+            للحصول على قناتي اضغط هنا
+        </a>
+        <div class="footer">
+            تم تصميم هذا الموقع من <a href="https://qwertyuiopqw12.github.io/defrgthyjuki/" target="_blank">Fusion Pro</a> 🌐 <a href="https://www.instagram.com/yaser_lorf" target="_blank">ياسر لورف للإنتاج الفني</a>
+        </div>
+    </div>
+</body>
+
+</html>
